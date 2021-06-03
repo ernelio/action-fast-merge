@@ -51,8 +51,8 @@ HEAD_REPO=$(echo "$pr_resp" | jq -r .head.repo.full_name)
 HEAD_BRANCH=$(echo "$pr_resp" | jq -r .head.ref)
 
 git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
-git config --global user.email "fast-merge@github.com"
-git config --global user.name "GitHub Fast Merge Action"
+git config --global user.email "erneliojunior@gmail.com"
+git config --global user.name "ernelio"
 
 set -o xtrace
 
