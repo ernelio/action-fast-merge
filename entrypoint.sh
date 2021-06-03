@@ -50,7 +50,7 @@ pr_resp=$(curl -X GET -s -H "${AUTH_HEADER}" -H "${API_HEADER}" \
 HEAD_REPO=$(echo "$pr_resp" | jq -r .head.repo.full_name)
 HEAD_BRANCH=$(echo "$pr_resp" | jq -r .head.ref)
 
-git remote set-url origin https://${{ secrets.GH_USER }}:${{ secrets.GH_PASS }}@github.com/$REPO_FULLNAME.git
+git remote set-url origin https://$BOT_GH_USER:$BOT_GH_TOKEN@github.com/$REPO_FULLNAME.git
 git config --global user.email "erneliojunior@gmail.com"
 git config --global user.name "ernelio"
 
